@@ -29,7 +29,7 @@ This script is perfect for bug bounty hunters and penetration testers who want a
 ## 💻 Pro Features Explained
 
 - **Recursive Levels**: Each level performs fuzzing on valid vhosts discovered from the previous level, allowing you to go deep into the vhost chain (`a.b.c.target.com`).
-- **Size Filtering**: It detects valid domains by sending `curl` request with random subdomain name which is not exist and compare its size with the fuzzing result.
+- **False-Positive Detection**: It detects valid domains by sending `curl` request with random subdomain name which is not exist and compare its size with the fuzzing result.
 - **Resumable**: If you rerun the script, it will skip levels already completed.
 - **CSV Reports**: Each processed domain gets a `report.csv` summarizing valid vhosts by level and protocol.
 - **Automatic Hosts Update**: All valid vhosts get added to `/etc/hosts` pointing to the target IP for easy browser testing.
