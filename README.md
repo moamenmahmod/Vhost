@@ -93,7 +93,7 @@ Make sure the following tools are installed:
 ~/bugbounty/targets/google/subdomains/
 ├── wildcard_domains.txt
 ├── vhosts/
-│   ├── sub1.google.com/
+│   ├── subdomain1.google.com/
 │   │   ├── valid_vhosts_level0.txt
 │   │   ├── valid_vhosts_level1.txt
 │   │   ├── ...
