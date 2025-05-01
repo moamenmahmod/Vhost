@@ -16,13 +16,23 @@ This script is perfect for bug bounty hunters and penetration testers who want a
 ## 🎯 Features
 
 - ✅ **Recursive vhost enumeration** up to user-defined levels.
-- ✅ **Auto-handles wildcard detection** by size comparison and random probes.
+- ✅ **Auto-handles False-Positives** by size comparison.
 - ✅ **Parallel processing** for multiple wildcard domains (multi-threaded using xargs).
 - ✅ **Auto-adds discovered vhosts** into your `/etc/hosts` file.
 - ✅ **Backup of `/etc/hosts`** to prevent accidental loss.
 - ✅ **Resumable** — skips already completed levels for efficiency.
 - ✅ Generates **CSV reports** for every domain processed.
 - ✅ Uses **ffuf** (fast web fuzzer) and **jq** for JSON parsing.
+
+---
+
+## 💻 Pro Features Explained
+
+- **Recursive Levels**: Each level performs fuzzing on valid vhosts discovered from the previous level, allowing you to go deep into the vhost chain (`a.b.c.target.com`).
+- **Size Filtering**: It detects wildcard domains using response size (`curl`) and filters out false positives.
+- **Resumable**: If you rerun the script, it will skip levels already completed.
+- **CSV Reports**: Each processed domain gets a `report.csv` summarizing valid vhosts by level and protocol.
+- **Automatic Hosts Update**: All valid vhosts get added to `/etc/hosts` pointing to the target IP for easy browser testing.
 
 ---
 
@@ -59,7 +69,7 @@ Make sure the following tools are installed:
 ./recursive_vhost_pro.sh -t TARGET -b BASE_DIR -w WORDLIST -a DOMAINS_FILE -l MAX_LEVEL
 ```
 
-### 🔥 Required Flags
+### 🏴 Required Flags
 
 | Flag | Description                          | Example                           |
 |------|--------------------------------------|-----------------------------------|
@@ -94,15 +104,7 @@ Make sure the following tools are installed:
 
 ---
 
-## 💡 Pro Features Explained
 
-- **Recursive Levels**: Each level performs fuzzing on valid vhosts discovered from the previous level, allowing you to go deep into the vhost chain (`a.b.c.target.com`).
-- **Size Filtering**: It detects wildcard domains using response size (`curl`) and filters out false positives.
-- **Resumable**: If you rerun the script, it will skip levels already completed.
-- **CSV Reports**: Each processed domain gets a `report.csv` summarizing valid vhosts by level and protocol.
-- **Automatic Hosts Update**: All valid vhosts get added to `/etc/hosts` pointing to the target IP for easy browser testing.
-
----
 
 ## ⚠️ Important Notes
 
@@ -113,7 +115,7 @@ Make sure the following tools are installed:
 
 ---
 
-## 🖇️ Dependencies
+## ◎ Dependencies
 
 - **ffuf**  
   Install:  
@@ -129,9 +131,9 @@ Make sure the following tools are installed:
 
 ---
 
-## 🏴‍☠️ Author
+## © Author
 
-**Mo'a**  
+**Moamen Mahmoud**  
 _Fully automated vhost enumeration tool for bug bounty hunters and pentesters._
 
 ---
