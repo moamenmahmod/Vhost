@@ -131,21 +131,24 @@ Make sure the following tools are installed:
 
 ---
 
-✅ TODO
-   
-   🔁 Rewrite the entire script in Go for better performance, portability, and maintainability.
+## 🛠️ TODO: Bash → Go Migration Plan
 
-   ⚙️ Add native Go routines for concurrent domain processing.
+This section tracks the rewrite progress of **Recursive Vhost Pro** from a Bash script to a modern, modular **Go application**.
 
-   📦 Replace Bash utilities (jq, curl, etc.) with Go standard library or minimal dependencies.
+### 🔁 Migration Goals
 
-   📈 Improve logging and error handling in Go.
+- [x] Decide on Go as the rewrite language
+- [ ] Replace all system tools (`curl`, `dig`, `jq`, etc.) with native Go equivalents
+- [ ] Implement wildcard detection via random hostname and content-length check
+- [ ] Implement FFUF-like vhost fuzzing logic in Go using goroutines
+- [ ] Recursively iterate over valid vhosts (depth-first or breadth-first)
+- [ ] Implement response filtering and false positive reduction
+- [ ] Write discovered vhosts into `/etc/hosts` (with permission check)
+- [ ] Add `/etc/hosts` backup and restore feature
+- [ ] Generate `report.csv` using Go's `encoding/csv`
+- [ ] Optional: Add real-time progress bar using `github.com/cheggaaa/pb/v3`
 
-   🔒 Build in permission checks for modifying /etc/hosts.
-
-   🧪 Add built-in unit tests for validating valid vhost logic.
-
-   📊 Implement built-in CSV report generation without external tools.
+---
 
 ## © Author
 
