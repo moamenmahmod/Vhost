@@ -131,11 +131,11 @@ Make sure the following tools are installed:
 
 ---
 
-## 🛠️ TODO: Bash → Go Migration Plan
+## TODO: Bash → Go Migration Plan
 
 This section tracks the rewrite progress of **Recursive Vhost Pro** from a Bash script to a modern, modular **Go application**.
 
-### 🔁 Migration Goals
+### Migration Goals
 
 - [ ] Decide on Go as the rewrite language
 - [ ] Replace all system tools (`curl`, `dig`, `jq`, etc.) with native Go equivalents
