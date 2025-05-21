@@ -131,6 +131,22 @@ Make sure the following tools are installed:
 
 ---
 
+✅ TODO
+   
+   🔁 Rewrite the entire script in Go for better performance, portability, and maintainability.
+
+   ⚙️ Add native Go routines for concurrent domain processing.
+
+   📦 Replace Bash utilities (jq, curl, etc.) with Go standard library or minimal dependencies.
+
+   📈 Improve logging and error handling in Go.
+
+   🔒 Build in permission checks for modifying /etc/hosts.
+
+   🧪 Add built-in unit tests for validating valid vhost logic.
+
+   📊 Implement built-in CSV report generation without external tools.
+
 ## © Author
 
 **Moamen Mahmoud**  
