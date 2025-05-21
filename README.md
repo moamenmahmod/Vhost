@@ -137,7 +137,7 @@ This section tracks the rewrite progress of **Recursive Vhost Pro** from a Bash 
 
 ### 🔁 Migration Goals
 
-- [x] Decide on Go as the rewrite language
+- [ ] Decide on Go as the rewrite language
 - [ ] Replace all system tools (`curl`, `dig`, `jq`, etc.) with native Go equivalents
 - [ ] Implement wildcard detection via random hostname and content-length check
 - [ ] Implement FFUF-like vhost fuzzing logic in Go using goroutines
