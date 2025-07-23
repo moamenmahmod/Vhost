@@ -1,1 +1,1 @@
-var api_token = 'secret';
+var api_token = 'testingjsmon';
